@@ -1,5 +1,5 @@
 id: haidan
-name: º£µ¨Ö®¼Ò
+name: æµ·èƒ†ä¹‹å®¶
 domain: https://www.haidan.video/
 encoding: UTF-8
 config_url: https://ghproxy.com/https://raw.githubusercontent.com/htnanako/movie-robot-public/main/app/sites/hdtime.yml
@@ -9,15 +9,15 @@ login:
     selector: a[href="logout.php"]
 
 category_mappings:
-  - { id: 405, cate_level1: Anime, cate_level2: TV/Anime, cate_level2_desc: "Animations(¶¯»­Æ¬)" }
-  - { id: 404, cate_level1: Documentary, cate_level2: TV/Documentary, cate_level2_desc: "Documentaries(¼ÍÂ¼Æ¬)" }
-  - { id: 408, cate_level1: Music, cate_level2: Audio,cate_level2_ desc: "HQ Audio(ÒôÀÖ)" }
-  - { id: 409, cate_level1: Other, cate_level2: Other, cate_level2_desc: "Misc(ÆäËû)" }
-  - { id: 401, cate_level1: Movie, cate_level2: Movies, cate_level2_desc: "Movies(µçÓ°)" }
+  - { id: 405, cate_level1: Anime, cate_level2: TV/Anime, cate_level2_desc: "Animations(åŠ¨ç”»ç‰‡)" }
+  - { id: 404, cate_level1: Documentary, cate_level2: TV/Documentary, cate_level2_desc: "Documentaries(çºªå½•ç‰‡)" }
+  - { id: 408, cate_level1: Music, cate_level2: Audio,cate_level2_ desc: "HQ Audio(éŸ³ä¹)" }
+  - { id: 409, cate_level1: Other, cate_level2: Other, cate_level2_desc: "Misc(å…¶ä»–)" }
+  - { id: 401, cate_level1: Movie, cate_level2: Movies, cate_level2_desc: "Movies(ç”µå½±)" }
   - { id: 406, cate_level1: Music, cate_level2: Audio/Video, cate_level2_desc: "Music Videos(MV)" }
-  - { id: 407, cate_level1: TV, cate_level2: TV/Sport, cate_level2_desc: "Sports(ÌåÓı)" }
-  - { id: 402, cate_level1: TV, cate_level2: TV, cate_level2_desc: "TV Series(µçÊÓ¾ç)" }
-  - { id: 403, cate_level1: TV, cate_level2: TV, cate_level2_desc: "TV Shows(×ÛÒÕ)" }
+  - { id: 407, cate_level1: TV, cate_level2: TV/Sport, cate_level2_desc: "Sports(ä½“è‚²)" }
+  - { id: 402, cate_level1: TV, cate_level2: TV, cate_level2_desc: "TV Series(ç”µè§†å‰§)" }
+  - { id: 403, cate_level1: TV, cate_level2: TV, cate_level2_desc: "TV Shows(ç»¼è‰º)" }
 
 userinfo:
   path: https://www.haidan.video/index.php
@@ -36,7 +36,7 @@ userinfo:
       selector: a[href^="https://www.haidan.video/userdetails.php?id="]
       attribute: class
     username:
-      default_value: 'Î´ÖªÓÃ»§Ãû'
+      default_value: 'æœªçŸ¥ç”¨æˆ·å'
       selector: a[href^="https://www.haidan.video/userdetails.php?id="]
     share_ratio:
       default_value: ''
@@ -44,21 +44,21 @@ userinfo:
       method: next_sibling
       filters:
         - name: replace
-          args: [ 'ÎŞÏŞ','inf' ]
+          args: [ 'æ— é™','inf' ]
     uploaded:
       default_value: 0
       selector: font[class="color_uploaded"]
       method: next_sibling
       filters:
         - name: replace
-          args: [ 'ÎŞÏŞ','inf' ]
+          args: [ 'æ— é™','inf' ]
     downloaded:
       default_value: 0
       selector: font[class="color_downloaded"]
       method: next_sibling
       filters:
         - name: replace
-          args: [ 'ÎŞÏŞ','inf' ]
+          args: [ 'æ— é™','inf' ]
     seeding:
       default_value: 0
       selector: img[alt="Torrents seeding"]
@@ -129,12 +129,12 @@ torrents:
         - name: re_search
           args: [ 'tt\d+',0 ]
     date_elapsed:
-      # Õ¾µãÉèÖÃ£¬ÒÑÈ¥Ê±¼ä (Ä¬ÈÏ)
+      # ç«™ç‚¹è®¾ç½®ï¼Œå·²å»æ—¶é—´ (é»˜è®¤)
       selector: td:nth-child(4) > span[title]
       attribute: title
       optional: true
     date_added:
-      # Õ¾µãÉèÖÃ£¬Êµ¼ÊÊ±¼ä
+      # ç«™ç‚¹è®¾ç½®ï¼Œå®é™…æ—¶é—´
       selector: td:nth-child(4):not(:has(span))
       optional: true
     date:
