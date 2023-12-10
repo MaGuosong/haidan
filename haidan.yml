@@ -2,7 +2,7 @@ id: haidan
 name: 海胆之家
 domain: https://www.haidan.video/
 encoding: UTF-8
-config_url: https://ghproxy.com/https://raw.githubusercontent.com/htnanako/movie-robot-public/main/app/sites/hdtime.yml
+config_url: https://ghproxy.com/https://raw.githubusercontent.com/MaGuosong/haidan/main/haidan.yml
 
 login:
   test:
